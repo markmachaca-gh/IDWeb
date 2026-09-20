@@ -11,7 +11,7 @@ body {
 }
 
 .tarjeta {
-    width: 550px;
+    width: 500px;
     max-width: 100%;
     margin: 30px auto;
     background-color: white;
@@ -23,7 +23,7 @@ body {
 h1 {
     text-align: center;
     color: #1a3a6b;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 22px;
 }
 
@@ -40,9 +40,12 @@ legend {
     padding: 0 5px;
 }
 
-label {
+.fila {
+    margin-bottom: 12px;
+}
+
+.fila label {
     display: block;
-    margin-top: 10px;
     margin-bottom: 4px;
     color: #333;
     font-size: 14px;
@@ -83,15 +86,27 @@ textarea:hover {
     border-color: #888;
 }
 
-.turnos label {
-    display: inline-block;
-    margin-right: 15px;
-    margin-top: 5px;
+.turnos {
+    display: flex;
+    gap: 15px;
 }
 
-.terminos {
-    margin-top: 15px;
+.turnos label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
 }
 
 .botones {
