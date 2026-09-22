@@ -11,12 +11,39 @@
 </head>
 <body>
 
+  <!-- Navbar responsivo -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portal Académico</a>
+      
+      <!-- Botón hamburguesa para móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+        </ul>
+        
+        <!-- Botones de Iniciar Sesión y Registrarse -->
+        <div class="d-flex gap-2 mt-2 mt-lg-0">
+          <a href="#" class="btn btn-outline-light">Iniciar Sesión</a>
+          <a href="#" class="btn btn-warning">Registrarse</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <main class="container py-5">
     <h1 class="text-center text-primary">Portal Académico</h1>
     <p class="text-center">Si ves Bootstrap aplicado, el CDN funciona correctamente.</p>
   </main>
 
-  <!-- Bootstrap 5 JS Bundle (incluye Popper) -->
+  <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
