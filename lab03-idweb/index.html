@@ -13,24 +13,18 @@
 
   <!-- Navbar responsivo -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand" href="#">Portal Académico</a>
-      
-      <!-- Botón hamburguesa para móviles -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Menú colapsable -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
         </ul>
-        
-        <!-- Botones de Iniciar Sesión y Registrarse -->
-        <div class="d-flex gap-2 mt-2 mt-lg-0">
+        <div class="d-flex gap-2 mt-3 mt-lg-0">
           <a href="#" class="btn btn-outline-light">Iniciar Sesión</a>
           <a href="#" class="btn btn-warning">Registrarse</a>
         </div>
@@ -38,12 +32,135 @@
     </div>
   </nav>
 
-  <main class="container py-5">
-    <h1 class="text-center text-primary">Portal Académico</h1>
-    <p class="text-center">Si ves Bootstrap aplicado, el CDN funciona correctamente.</p>
-  </main>
+  <!-- Hero Section con Flexbox -->
+  <section class="hero container my-5">
+    <div class="hero-text">
+      <h1 class="display-4 fw-bold text-primary">Bienvenido al Portal Académico</h1>
+      <p class="lead">Gestiona tus cursos, consulta tus notas y mantente al día con las noticias de tu universidad.</p>
+      <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-md-start">
+        <a href="#cursos" class="btn btn-primary btn-lg">Explorar Cursos</a>
+        <a href="#" class="btn btn-outline-secondary btn-lg">Registrarse</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://picsum.photos/600/400" alt="Estudiantes universitarios" class="img-fluid">
+    </div>
+  </section>
 
-  <!-- Bootstrap 5 JS Bundle -->
+  <!-- Catálogo de Cursos con CSS Grid -->
+  <section id="cursos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Cursos Ofertados</h2>
+      <div class="cursos-grid">
+        <div class="card curso-card">
+          <div class="card-body">
+            <h5 class="card-title">Programación Web</h5>
+            <p class="card-text">Aprende HTML, CSS y JavaScript para crear sitios modernos.</p>
+            <a href="#" class="btn btn-sm btn-primary">Ver más</a>
+          </div>
+        </div>
+        <div class="card curso-card">
+          <div class="card-body">
+            <h5 class="card-title">Base de Datos</h5>
+            <p class="card-text">Diseña y administra bases de datos relacionales y NoSQL.</p>
+            <a href="#" class="btn btn-sm btn-primary">Ver más</a>
+          </div>
+        </div>
+        <div class="card curso-card">
+          <div class="card-body">
+            <h5 class="card-title">Redes y Comunicaciones</h5>
+            <p class="card-text">Configura redes, protocolos y seguridad informática.</p>
+            <a href="#" class="btn btn-sm btn-primary">Ver más</a>
+          </div>
+        </div>
+        <div class="card curso-card">
+          <div class="card-body">
+            <h5 class="card-title">Inteligencia Artificial</h5>
+            <p class="card-text">Introducción a machine learning y redes neuronales.</p>
+            <a href="#" class="btn btn-sm btn-primary">Ver más</a>
+          </div>
+        </div>
+        <div class="card curso-card">
+          <div class="card-body">
+            <h5 class="card-title">Ingeniería de Software</h5>
+            <p class="card-text">Metodologías ágiles, patrones de diseño y calidad.</p>
+            <a href="#" class="btn btn-sm btn-primary">Ver más</a>
+          </div>
+        </div>
+        <div class="card curso-card">
+          <div class="card-body">
+            <h5 class="card-title">Seguridad Informática</h5>
+            <p class="card-text">Protege sistemas y datos contra amenazas cibernéticas.</p>
+            <a href="#" class="btn btn-sm btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulo de Noticias y Eventos con Bootstrap -->
+  <section id="noticias" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Noticias y Eventos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/400/200?random=1" class="card-img-top" alt="Noticia 1">
+            <div class="card-body">
+              <h5 class="card-title">Inicio de Semestre</h5>
+              <p class="card-text">Conoce las fechas importantes y el calendario académico 2026.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/400/200?random=2" class="card-img-top" alt="Noticia 2">
+            <div class="card-body">
+              <h5 class="card-title">Feria de Ciencias</h5>
+              <p class="card-text">Participa en la feria anual de proyectos e innovación tecnológica.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/400/200?random=3" class="card-img-top" alt="Noticia 3">
+            <div class="card-body">
+              <h5 class="card-title">Convenio Internacional</h5>
+              <p class="card-text">Nuevas oportunidades de intercambio estudiantil en el extranjero.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalNoticia" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalle de la Noticia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Aquí va la información completa de la noticia o evento seleccionado. Este es un cuadro modal de Bootstrap 5.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2026 Portal Académico. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
