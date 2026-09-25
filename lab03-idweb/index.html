@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">Portal Académico</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,10 +28,9 @@
     </div>
   </nav>
 
-  <!-- Hero Section con Flexbox -->
   <section class="hero container my-5">
     <div class="hero-text">
-      <h1 class="display-4 fw-bold text-primary">Bienvenido al Portal Académico</h1>
+      <h1 class="display-4 fw-bold">Bienvenido al Portal Académico</h1>
       <p class="lead">Gestiona tus cursos, consulta tus notas y mantente al día con las noticias de tu universidad.</p>
       <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-md-start">
         <a href="#cursos" class="btn btn-primary btn-lg">Explorar Cursos</a>
@@ -45,8 +42,7 @@
     </div>
   </section>
 
-  <!-- Catálogo de Cursos con CSS Grid -->
-  <section id="cursos" class="py-5 bg-light">
+  <section id="cursos" class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">Cursos Ofertados</h2>
       <div class="cursos-grid">
@@ -96,7 +92,6 @@
     </div>
   </section>
 
-  <!-- Módulo de Noticias y Eventos -->
   <section id="noticias" class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">Noticias y Eventos</h2>
@@ -134,8 +129,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Modal -->
   <div class="modal fade" id="modalNoticia" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -144,7 +137,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p>Aquí va la información (Cuadro modal de Bootstrap 5.)</p>
+          <p>Aquí va la información completa de la noticia o evento seleccionado.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -153,8 +146,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
+  <footer class="text-center py-3 mt-5">
     <p class="mb-0">&copy; 2026 Portal Académico. Todos los derechos reservados.</p>
   </footer>
 
