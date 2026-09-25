@@ -125,8 +125,27 @@ body {
   font-weight: bold;
 }
 
-.btn-dark {
+.btn-azul {
+  background-color: #003366;
   border: none;
+  border-radius: 0;
+  font-weight: bold;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.btn-azul:hover {
+  background-color: #4a90d9;
+  color: #ffffff;
+}
+
+.btn-azul:focus,
+.btn-azul:focus-visible,
+.btn-azul:active {
+  background-color: #4a90d9;
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .btn-primary {
