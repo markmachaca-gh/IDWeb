@@ -82,6 +82,12 @@ body {
   background-color: #ffffff;
   border: 1px solid #999999;
   border-radius: 0;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  background-color: #d6e9ff;
+  border-color: #003366;
 }
 
 .card-body {
@@ -110,6 +116,11 @@ body {
 
 #noticias .card {
   border-radius: 0;
+}
+
+#noticias .card:hover {
+  background-color: #ffe6f0;
+  border-color: #cc0066;
 }
 
 #noticias .card-img-top {
@@ -155,8 +166,9 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #002244;
-  border-color: #002244;
+  background-color: #4a90d9;
+  border-color: #4a90d9;
+  color: #ffffff;
 }
 
 .btn-warning {
@@ -166,7 +178,7 @@ body {
 }
 
 .btn-warning:hover {
-  background-color: #e6b800;
+  background-color: #ffe680;
 }
 
 .btn-outline-primary {
@@ -176,7 +188,8 @@ body {
 }
 
 .btn-outline-primary:hover {
-  background-color: #003366;
+  background-color: #4a90d9;
+  border-color: #4a90d9;
   color: #ffffff;
 }
 
