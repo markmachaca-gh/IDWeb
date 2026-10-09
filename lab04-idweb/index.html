@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Titulo principal de la pagina -->
+  <h1>Gestor de Tareas Universitarias</h1>
+
+  <!-- Contenedor vacio donde se inyectan las alertas -->
+  <div id="alertas"></div>
+
+  <!-- Formulario con los tres campos de la tarea -->
+  <form id="form-tarea">
+    <label for="titulo">Titulo
+      <input type="text" id="titulo" placeholder="Ej. Investigar Flexbox">
+    </label>
+
+    <label for="curso">Curso
+      <input type="text" id="curso" placeholder="Ej. IDWeb">
+    </label>
+
+    <label for="fechaEntrega">Fecha de entrega
+      <input type="date" id="fechaEntrega">
+    </label>
+
+    <button type="submit">Agregar tarea</button>
+  </form>
+
+  <!-- Subtitulo de la seccion de la lista -->
+  <h2>Mis tareas</h2>
+
+  <!-- Grupo de botones que controlan el filtro de la lista -->
+  <div class="filtros">
+    <button class="btn-filtro activo" data-filtro="todas">Todas</button>
+    <button class="btn-filtro" data-filtro="pendientes">Pendientes</button>
+    <button class="btn-filtro" data-filtro="completadas">Completadas</button>
+  </div>
+
+  <!-- Lista vacia que se llena dinamicamente desde app.js -->
+  <ul id="lista-tareas"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
