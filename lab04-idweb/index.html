@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <!-- Titulo principal de la pagina -->
+  <!-- Titulo -->
   <h1>Gestor de Tareas Universitarias</h1>
 
-  <!-- Contenedor vacio donde se inyectan las alertas -->
+  <!-- alertas-->
   <div id="alertas"></div>
 
-  <!-- Formulario con los tres campos de la tarea -->
+  <!-- campos de tarea -->
   <form id="form-tarea">
     <label for="titulo">Titulo
       <input type="text" id="titulo" placeholder="Ej. Investigar Flexbox">
@@ -31,17 +31,17 @@
     <button type="submit">Agregar tarea</button>
   </form>
 
-  <!-- Subtitulo de la seccion de la lista -->
+  <!-- Subtitulo  -->
   <h2>Mis tareas</h2>
 
-  <!-- Grupo de botones que controlan el filtro de la lista -->
+  <!-- botones -->
   <div class="filtros">
     <button class="btn-filtro activo" data-filtro="todas">Todas</button>
     <button class="btn-filtro" data-filtro="pendientes">Pendientes</button>
     <button class="btn-filtro" data-filtro="completadas">Completadas</button>
   </div>
 
-  <!-- Lista vacia que se llena dinamicamente desde app.js -->
+  <!-- Lista -->
   <ul id="lista-tareas"></ul>
 
   <script src="app.js"></script>
