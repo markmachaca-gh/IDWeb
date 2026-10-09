@@ -1,11 +1,10 @@
-/* Regla global que elimina margenes y rellenos por defecto */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Fuente base y color de fondo de toda la pagina */
+/* Fuente y color de fondo */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f6f9;
@@ -14,7 +13,7 @@ body {
   padding: 20px;
 }
 
-/* Titulo principal centrado en azul oscuro */
+/* Titulo */
 h1 {
   font-size: 20px;
   color: #003366;
@@ -22,7 +21,7 @@ h1 {
   text-align: center;
 }
 
-/* Subtitulo de la seccion de tareas */
+/* Subtitulo */
 h2 {
   font-size: 16px;
   color: #003366;
@@ -30,7 +29,7 @@ h2 {
   text-align: center;
 }
 
-/* Caja blanca del formulario con borde y distribucion vertical */
+/* Caja blanca del formulario */
 #form-tarea {
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -42,14 +41,14 @@ h2 {
   margin: 0 auto;
 }
 
-/* Etiqueta de cada campo, en negrita y azul */
+/* Etiqueta (elecion)*/
 #form-tarea label {
   font-weight: bold;
   color: #003366;
   font-size: 13px;
 }
 
-/* Cajas de texto del formulario */
+/* Cajas (contenido)*/
 #form-tarea input {
   padding: 8px;
   border: 1px solid #999999;
@@ -58,7 +57,7 @@ h2 {
   margin-top: 4px;
 }
 
-/* Boton de envio del formulario */
+/* Boton de envio */
 #form-tarea button {
   padding: 10px;
   background-color: #003366;
@@ -68,13 +67,13 @@ h2 {
   cursor: pointer;
 }
 
-/* Contenedor de las alertas dinamicas */
+/* Alertas*/
 #alertas {
   max-width: 600px;
   margin: 0 auto 10px;
 }
 
-/* Estilo comun de cualquier alerta */
+/* Estilo de cualquier alerta */
 .alerta {
   padding: 10px;
   margin-bottom: 8px;
@@ -82,21 +81,21 @@ h2 {
   border-left: 4px solid;
 }
 
-/* Variante roja para errores de validacion */
+/* Error visible */
 .alerta-error {
   background-color: #ffe6e6;
   border-color: #cc0000;
   color: #cc0000;
 }
 
-/* Variante verde para operaciones exitosas */
+/* Operaciones con exito */
 .alerta-ok {
   background-color: #e6ffe6;
   border-color: #006600;
   color: #006600;
 }
 
-/* Barra horizontal con los botones de filtro */
+/* 3 botones de filtro ( horizontal )*/
 .filtros {
   display: flex;
   gap: 8px;
@@ -104,7 +103,7 @@ h2 {
   justify-content: center;
 }
 
-/* Estado normal de cada boton de filtro */
+/* Formato de cada filtro */
 .btn-filtro {
   padding: 6px 12px;
   border: 1px solid #003366;
@@ -115,13 +114,13 @@ h2 {
   cursor: pointer;
 }
 
-/* Estado del filtro que esta seleccionado en ese momento */
+/* Filtro seleccionado */
 .btn-filtro.activo {
   background-color: #003366;
   color: #ffffff;
 }
 
-/* Lista vertical de tareas */
+/* Lista de tareas ( vertical ) */
 #lista-tareas {
   list-style: none;
   max-width: 600px;
@@ -131,7 +130,7 @@ h2 {
   gap: 10px;
 }
 
-/* Cada item de la lista con su contenido y botones */
+/* Cada item de la lista con su contenido */
 .tarea {
   display: flex;
   justify-content: space-between;
@@ -142,31 +141,31 @@ h2 {
   background-color: #ffffff;
 }
 
-/* Titulo de la tarea dentro del item */
+/* Titulo de la tarea */
 .tarea-titulo {
   font-weight: bold;
   color: #003366;
 }
 
-/* Linea inferior con el curso y la fecha */
+/* Linea del curso y la fecha */
 .tarea-meta {
   font-size: 12px;
   color: #666666;
 }
 
-/* Apariencia de una tarea marcada como completada */
+/* Formato de una tarea hecha */
 .tarea.completada .tarea-titulo {
   text-decoration: line-through;
   color: #888888;
 }
 
-/* Contenedor de los dos botones de cada tarea */
+/* Formato de los dos botones de cada tarea */
 .tarea-acciones {
   display: flex;
   gap: 6px;
 }
 
-/* Propiedades compartidas por los botones de accion */
+/* Propiedades de los botones*/
 .btn-completar,
 .btn-eliminar {
   padding: 5px 9px;
@@ -177,17 +176,17 @@ h2 {
   color: #ffffff;
 }
 
-/* Color verde para el boton completar */
+/* Boton verde */
 .btn-completar {
   background-color: #006600;
 }
 
-/* Color rojo para el boton eliminar */
+/* Boton rojo */
 .btn-eliminar {
   background-color: #cc0000;
 }
 
-/* Texto que aparece cuando la lista esta vacia */
+/* Texto cuando una lista esta vacia */
 .vacio {
   text-align: center;
   color: #888888;
