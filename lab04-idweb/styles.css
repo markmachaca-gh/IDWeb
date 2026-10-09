@@ -1,0 +1,196 @@
+/* Regla global que elimina margenes y rellenos por defecto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fuente base y color de fondo de toda la pagina */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #222;
+  font-size: 14px;
+  padding: 20px;
+}
+
+/* Titulo principal centrado en azul oscuro */
+h1 {
+  font-size: 20px;
+  color: #003366;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Subtitulo de la seccion de tareas */
+h2 {
+  font-size: 16px;
+  color: #003366;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+/* Caja blanca del formulario con borde y distribucion vertical */
+#form-tarea {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Etiqueta de cada campo, en negrita y azul */
+#form-tarea label {
+  font-weight: bold;
+  color: #003366;
+  font-size: 13px;
+}
+
+/* Cajas de texto del formulario */
+#form-tarea input {
+  padding: 8px;
+  border: 1px solid #999999;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Boton de envio del formulario */
+#form-tarea button {
+  padding: 10px;
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Contenedor de las alertas dinamicas */
+#alertas {
+  max-width: 600px;
+  margin: 0 auto 10px;
+}
+
+/* Estilo comun de cualquier alerta */
+.alerta {
+  padding: 10px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  border-left: 4px solid;
+}
+
+/* Variante roja para errores de validacion */
+.alerta-error {
+  background-color: #ffe6e6;
+  border-color: #cc0000;
+  color: #cc0000;
+}
+
+/* Variante verde para operaciones exitosas */
+.alerta-ok {
+  background-color: #e6ffe6;
+  border-color: #006600;
+  color: #006600;
+}
+
+/* Barra horizontal con los botones de filtro */
+.filtros {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+/* Estado normal de cada boton de filtro */
+.btn-filtro {
+  padding: 6px 12px;
+  border: 1px solid #003366;
+  background-color: #ffffff;
+  color: #003366;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estado del filtro que esta seleccionado en ese momento */
+.btn-filtro.activo {
+  background-color: #003366;
+  color: #ffffff;
+}
+
+/* Lista vertical de tareas */
+#lista-tareas {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada item de la lista con su contenido y botones */
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+/* Titulo de la tarea dentro del item */
+.tarea-titulo {
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Linea inferior con el curso y la fecha */
+.tarea-meta {
+  font-size: 12px;
+  color: #666666;
+}
+
+/* Apariencia de una tarea marcada como completada */
+.tarea.completada .tarea-titulo {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+/* Contenedor de los dos botones de cada tarea */
+.tarea-acciones {
+  display: flex;
+  gap: 6px;
+}
+
+/* Propiedades compartidas por los botones de accion */
+.btn-completar,
+.btn-eliminar {
+  padding: 5px 9px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Color verde para el boton completar */
+.btn-completar {
+  background-color: #006600;
+}
+
+/* Color rojo para el boton eliminar */
+.btn-eliminar {
+  background-color: #cc0000;
+}
+
+/* Texto que aparece cuando la lista esta vacia */
+.vacio {
+  text-align: center;
+  color: #888888;
+  font-style: italic;
+  padding: 15px;
+}
