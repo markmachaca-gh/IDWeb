@@ -7,7 +7,7 @@ const STORAGE_KEY = 'tareas-universitarias';
 // Filtro de tareas que se muestra: 'todas', 'pendientes' o 'completadas'
 let filtroActivo = 'todas';
 
-// Referencias a los elementos que se ingresan
+// Referencias de elementos que se ingresan
 const form          = document.querySelector('#form-tarea');
 const inputTitulo   = document.querySelector('#titulo');
 const inputCurso    = document.querySelector('#curso');
@@ -16,7 +16,7 @@ const divAlertas    = document.querySelector('#alertas');
 const listaTareas   = document.querySelector('#lista-tareas');
 const botonesFiltro = document.querySelectorAll('.btn-filtro');
 
-// Serializa el arreglo de tareas y lo escribe en localStorage
+// Se arreglo se escribe en localStorage
 function guardarEnStorage() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(tareas));
 }
@@ -26,7 +26,7 @@ function cargarDeStorage() {
   tareas = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 }
 
-// Crea un div de alerta con el mensaje y el estilo segun su tipo
+// Muestra la alerta y tipo de error
 function mostrarAlerta(mensaje, tipo = 'error') {
   divAlertas.innerHTML = '';
   const div = document.createElement('div');
@@ -34,24 +34,24 @@ function mostrarAlerta(mensaje, tipo = 'error') {
   div.textContent = mensaje;
   divAlertas.appendChild(div);
 
-  // La alerta se retira del DOM despues de 3 segundos
+  // La alerta se borra en 3s
   setTimeout(() => div.remove(), 3000);
 }
 
-// Reconstruye la lista de tareas en el DOM segun el filtro activo
+// Reconstruye la lista de tareas 
 function renderizarTareas() {
-  // Devuelve el subconjunto de tareas que corresponde al filtro activo
+  // Muestra el subconjunto de tareas
   const visibles = tareas.filter(t => {
     if (filtroActivo === 'pendientes')  return !t.completada;
     if (filtroActivo === 'completadas') return t.completada;
     return true;
   });
 
-  // Cuando no hay tareas se muestra un mensaje en su lugar
+  // Si no hay tareas se muestra un mensaje 
   if (visibles.length === 0) {
     listaTareas.innerHTML = '<li class="vacio">No hay tareas para mostrar.</li>';
   } else {
-    // Cada tarea se convierte en un <li> con map
+    // Cada tarea se cvuelve un <li> con ""map""
     listaTareas.innerHTML = visibles.map(t => `
       <li class="tarea${t.completada ? ' completada' : ''}" data-id="${t.id}">
         <div>
@@ -66,7 +66,7 @@ function renderizarTareas() {
     `).join('');
   }
 
-  // Acumula los totales de tareas segun su estado (reduce)
+  // Acumula los totales de tareas (reduce)
   const { total, completadas } = tareas.reduce(
     (acc, t) => {
       acc.total++;
@@ -83,7 +83,7 @@ form.addEventListener('submit', (e) => {
   // Anula el comportamiento por defecto del submit
   e.preventDefault();
 
-  // Valores normalizados de los campos
+  // Valores normalizados
   const titulo = inputTitulo.value.trim();
   const curso  = inputCurso.value.trim();
   const fecha  = inputFecha.value;
@@ -93,13 +93,13 @@ form.addEventListener('submit', (e) => {
   if (!curso)  return mostrarAlerta('El curso no puede estar vacio.');
   if (!fecha)  return mostrarAlerta('Debes elegir una fecha de entrega.');
 
-  // La fecha debe ser posterior a hoy
+  // Verifica la fecha
   const hoy = new Date();
   hoy.setHours(0, 0, 0, 0);
   if (new Date(fecha + 'T00:00:00') <= hoy)
     return mostrarAlerta('La fecha debe ser posterior a hoy.');
 
-  // Objeto que representa la nueva tarea
+  // Objeto de la nueva tarea
   tareas.push({ id: Date.now(), titulo, curso, fechaEntrega: fecha, completada: false });
 
   guardarEnStorage();
@@ -108,7 +108,7 @@ form.addEventListener('submit', (e) => {
   mostrarAlerta('Tarea agregada correctamente.', 'ok');
 });
 
-// Delegacion de eventos: un solo listener atiende los clics de toda la lista
+// Eventos: un solo ""listener"" atiende los clics de la lista
 listaTareas.addEventListener('click', (e) => {
   const boton = e.target.closest('button[data-accion]');
   if (!boton) return;
@@ -117,11 +117,11 @@ listaTareas.addEventListener('click', (e) => {
   const accion = boton.dataset.accion;
 
   if (accion === 'completar') {
-    // Invierte el estado completada de la tarea indicada (find)
+    // Cambia a tare completada
     const t = tareas.find(t => t.id === id);
     if (t) t.completada = !t.completada;
   } else {
-    // Remueve del arreglo la tarea cuyo id coincide con el recibido (filter)
+    // Remueve la tarea cuando el id coincide con el ingresado (filter)
     tareas = tareas.filter(t => t.id !== id);
   }
 
@@ -129,7 +129,7 @@ listaTareas.addEventListener('click', (e) => {
   renderizarTareas();
 });
 
-// Cada boton de filtro actualiza el estado y vuelve a pintar la lista
+// Cada boton de filtro actualiza el estado y vuelve a cambiar
 botonesFiltro.forEach(b => {
   b.addEventListener('click', () => {
     botonesFiltro.forEach(x => x.classList.remove('activo'));
